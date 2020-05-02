@@ -28,18 +28,17 @@ struct TrainingItem: Codable, Equatable, Identifiable {
 struct Todo: Codable, Identifiable {
     public var id: Int
     public var title: String
-    public var completed: Bool
 }
 
 class FetchToDo: ObservableObject {
-    @Published var todos = [TrainingSection]()
+    @Published var todos = [Todo]()
      
     init() {
         let url = URL(string: "https://jsonplaceholder.typicode.com/todos")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
                 if let todoData = data {
-                    let decodedData = try JSONDecoder().decode([TrainingSection].self, from: todoData)
+                    let decodedData = try JSONDecoder().decode([Todo].self, from: todoData)
                     DispatchQueue.main.async {
                         self.todos = decodedData
                     }
@@ -60,6 +59,9 @@ struct MenuTrain: View {
             List(fetch.todos) { todo in
                 VStack(alignment: .leading) {
                     Text(todo.title)
+                        .font(.body)
+                        .fontWeight(.light)
+                        .foregroundColor(Color.blue)
                 }
             }
         }

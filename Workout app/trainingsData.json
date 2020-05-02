@@ -1,91 +1,26 @@
 [
 {
     "id": 1,
-    "title": "1.05.2020",
-    "items": [
-        {
-            "id": 11,
-            "title": "Squats",
-            "reps": 20,
-            "parts": ["B", "L"],
-        },
-        {
-            "id": 12,
-            "title": "Pushups",
-            "reps": 14,
-            "parts": ["A", "B"],
-        },
-        {
-            "id": 13,
-            "title": "Pull ups",
-            "reps": 5,
-            "parts": ["A", "B"],
-        },
-        {
-            "id": 14,
-            "title": "Leg rises",
-            "reps": 25,
-            "parts": ["B", "L"],
-        }
-    ]
+    "date": "1.05.2020",
+    "title": "Squats",
+    "reps": 20,
 },
 {
     "id": 2,
-    "title": "2.05.2020",
-    "items": [
-        {
-            "id": 21,
-            "title": "Squats",
-            "reps": 30,
-            "parts": ["B", "L"],
-        },
-        {
-            "id": 22,
-            "title": "Pushups",
-            "reps": 10,
-            "parts": ["A", "B"],
-        },
-        {
-            "id": 23,
-            "title": "Pull ups",
-            "reps": 50,
-            "parts": ["A", "B"],
-        },
-        {
-            "id": 24,
-            "title": "Leg rises",
-            "reps": 55,
-            "parts": ["B", "L"],
-        }
-    ]
+    "date": "1.05.2020",
+    "title": "Pushup",
+    "reps": 25,
 },
 {
     "id": 3,
-    "title": "3.05.2020",
-    "items": [
-        {
-            "id": 31,
-            "title": "Squats",
-            "reps": 22,
-            "parts": ["B", "L"],
-        },
-        {
-            "id": 32,
-            "title": "Pushups",
-            "reps": 12,
-            "parts": ["A", "B"],
-        },
-        {
-            "id": 33,
-            "title": "Pull ups",
-            "reps": 7,
-            "parts": ["A", "B"],
-        },
-        {
-            "id": 34,
-            "title": "Leg rises",
-            "reps": 37,
-            "parts": ["B", "L"],
-        }
-    ]
+    "date": "2.05.2020",
+    "title": "Pullup",
+    "reps": 39,
 },
+{
+    "id": 4,
+    "date": "2.05.2020",
+    "title": "Climber",
+    "reps": 35,
+},
+]
