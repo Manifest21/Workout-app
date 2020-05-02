@@ -21,3 +21,11 @@ struct TrainingItem: Codable, Equatable, Identifiable {
     var reps: Int
     var parts: [String]
 }
+
+class FetchTrainings: ObservableObject {
+    @Published var trainings = [TrainingSession]()
+    
+    init() {
+        let url = URL(String: ")
+    }
+}
