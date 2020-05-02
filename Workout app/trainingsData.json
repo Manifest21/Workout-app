@@ -1,89 +1,89 @@
 [
 {
-    "id": "01052020",
-    "name": "1.05.2020",
+    "id": "d5388d6b-90d6-43f0-bbd9-425b5a59e8c5",
+    "title": "1.05.2020",
     "items": [
         {
-            "id": "1-1",
-            "name": "Squats",
+            "id": "010e7e74-eb0a-4ade-ae46-c504e28c82dd",
+            "title": "Squats",
             "reps": 20,
             "parts": ["B", "L"],
         },
         {
-            "id": "1-2",
-            "name": "Pushups",
+            "id": "ad9bd6ea-4321-408a-b334-b1d256598f52",
+            "title": "Pushups",
             "reps": 14,
             "parts": ["A", "B"],
         },
         {
-            "id": "1-3",
-            "name": "Pull ups",
+            "id": "3673b5a6-40eb-47c9-a366-fdb7c73cca04",
+            "title": "Pull ups",
             "reps": 5,
             "parts": ["A", "B"],
         },
         {
-            "id": "1-4",
-            "name": "Leg rises",
+            "id": "a4b48788-71f9-4aa9-8535-18fa5436a03e",
+            "title": "Leg rises",
             "reps": 25,
             "parts": ["B", "L"],
         }
     ]
 },
 {
-    "id": "02052020",
-    "name": "2.05.2020",
+    "id": "d6cb7df2-38d6-46f7-a144-deae6da364b9",
+    "title": "2.05.2020",
     "items": [
         {
-            "id": "2-1",
-            "name": "Squats",
+            "id": "114161fb-1da4-4895-992c-4501c00e3b88",
+            "title": "Squats",
             "reps": 30,
             "parts": ["B", "L"],
         },
         {
-            "id": "2-2",
-            "name": "Pushups",
+            "id": "c279c6fc-6838-40a0-b4ec-fd16e6d9a897",
+            "title": "Pushups",
             "reps": 10,
             "parts": ["A", "B"],
         },
         {
-            "id": "2-3",
-            "name": "Pull ups",
+            "id": "679ac16b-31d5-46da-886e-90afeb535404",
+            "title": "Pull ups",
             "reps": 50,
             "parts": ["A", "B"],
         },
         {
-            "id": "2-4",
-            "name": "Leg rises",
+            "id": "dc6f62d4-5844-4cc3-bd7c-b6e29a357c23",
+            "title": "Leg rises",
             "reps": 55,
             "parts": ["B", "L"],
         }
     ]
 },
 {
-    "id": "03052020",
-    "name": "3.05.2020",
+    "id": "f9b3b572-fdf4-45f7-8fcc-84eea027958a",
+    "title": "3.05.2020",
     "items": [
         {
-            "id": "3-1",
-            "name": "Squats",
+            "id": "d21005a6-ba78-44f8-bf05-1670a3cd6aaf",
+            "title": "Squats",
             "reps": 22,
             "parts": ["B", "L"],
         },
         {
-            "id": "3-2",
-            "name": "Pushups",
+            "id": "1979100b-345a-4e59-841f-c6ea43bcdcf1",
+            "title": "Pushups",
             "reps": 12,
             "parts": ["A", "B"],
         },
         {
-            "id": "3-3",
-            "name": "Pull ups",
+            "id": "ca3f1398-bbfc-4685-8947-4e73849aa85b",
+            "title": "Pull ups",
             "reps": 7,
             "parts": ["A", "B"],
         },
         {
-            "id": "3-4",
-            "name": "Leg rises",
+            "id": "653f8fca-9464-4a60-b0a2-c5602708b587",
+            "title": "Leg rises",
             "reps": 37,
             "parts": ["B", "L"],
         }

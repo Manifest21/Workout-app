@@ -8,10 +8,12 @@
 
 
 import SwiftUI
+import Foundation
+import Combine
 
 struct TrainingSection: Codable, Identifiable {
     var id: UUID
-    var name: String
+    var title: String
     var items: [TrainingItem]
 }
 
@@ -23,46 +25,45 @@ struct TrainingItem: Codable, Equatable, Identifiable {
 }
 
 
+struct Todo: Codable, Identifiable {
+    public var id: Int
+    public var title: String
+    public var completed: Bool
+}
 
-class FetchTrainings: ObservableObject {
-    @Published var trainings = [TrainingSection]()
-    
+class FetchToDo: ObservableObject {
+    @Published var todos = [TrainingSection]()
+     
     init() {
-        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsData.json")!
+        let url = URL(string: "https://github.com/Manifest21/Workout-app/blob/master/Workout%20app/menu.json")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
-                if let trainingsData = data {
-                    let decodedData = try JSONDecoder().decode([TrainingSection].self, from: trainingsData)
+                if let todoData = data {
+                    let decodedData = try JSONDecoder().decode([TrainingSection].self, from: todoData)
                     DispatchQueue.main.async {
-                        self.trainings = decodedData
-                        
+                        self.todos = decodedData
                     }
                 } else {
                     print("No data")
-                    
                 }
             } catch {
                 print("Error")
-                
             }
         }.resume()
     }
 }
 
 struct MenuTrain: View {
-    @ObservedObject var fetch = FetchTrainings()
-    
+    @ObservedObject var fetch = FetchToDo()
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(fetch.trainings) { types in
-                    Text(types.name)
-                    
-                    ForEach(types.items) { item in
-                        Text(item.name)
-                    }
+        VStack {
+            List(fetch.todos) { todo in
+                VStack(alignment: .leading) {
+                    Text(todo.title)
+                        .font(.system(size: 11))
+                        .foregroundColor(Color.gray)
                 }
-            }.navigationBarTitle("Training History")
+            }
         }
     }
 }
