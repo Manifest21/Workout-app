@@ -11,11 +11,7 @@ import SwiftUI
 import Foundation
 import Combine
 
-struct TrainingSection: Codable, Identifiable {
-    public var id: Int
-    public var title: String
-    public var items: [TrainingItem]
-}
+
 
 struct TrainingItem: Codable, Equatable, Identifiable {
     public var id: Int
@@ -28,13 +24,14 @@ struct TrainingItem: Codable, Equatable, Identifiable {
 struct Todo: Codable, Identifiable {
     public var id: Int
     public var title: String
+    public var items: [TrainingItem]
 }
 
 class FetchToDo: ObservableObject {
     @Published var todos = [Todo]()
      
     init() {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/todos")!
+        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsData.json")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
                 if let todoData = data {
