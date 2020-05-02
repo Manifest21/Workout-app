@@ -12,16 +12,16 @@ import Foundation
 import Combine
 
 struct TrainingSection: Codable, Identifiable {
-    var id: UUID
-    var title: String
-    var items: [TrainingItem]
+    public var id: Int
+    public var title: String
+    public var items: [TrainingItem]
 }
 
 struct TrainingItem: Codable, Equatable, Identifiable {
-    var id: UUID
-    var name: String
-    var reps: Int
-    var parts: [String]
+    public var id: Int
+    public var name: String
+    public var reps: Int
+    public var parts: [String]
 }
 
 
@@ -35,7 +35,7 @@ class FetchToDo: ObservableObject {
     @Published var todos = [TrainingSection]()
      
     init() {
-        let url = URL(string: "https://github.com/Manifest21/Workout-app/blob/master/Workout%20app/menu.json")!
+        let url = URL(string: "https://jsonplaceholder.typicode.com/todos")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
                 if let todoData = data {
@@ -60,8 +60,6 @@ struct MenuTrain: View {
             List(fetch.todos) { todo in
                 VStack(alignment: .leading) {
                     Text(todo.title)
-                        .font(.system(size: 11))
-                        .foregroundColor(Color.gray)
                 }
             }
         }
