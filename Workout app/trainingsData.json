@@ -1,25 +1,25 @@
 [
 {
     "id": 1,
-    "date": "1.05.2020",
+    "date": "01.05.2020",
     "title": "Squats",
     "reps": 20,
 },
 {
     "id": 2,
-    "date": "1.05.2020",
+    "date": "01.05.2020",
     "title": "Pushup",
     "reps": 25,
 },
 {
     "id": 3,
-    "date": "2.05.2020",
+    "date": "02.05.2020",
     "title": "Pullup",
     "reps": 39,
 },
 {
     "id": 4,
-    "date": "2.05.2020",
+    "date": "02.05.2020",
     "title": "Climber",
     "reps": 35,
 },

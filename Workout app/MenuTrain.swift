@@ -12,19 +12,10 @@ import Foundation
 import Combine
 
 
-
-struct TrainingItem: Codable, Equatable, Identifiable {
-    public var id: Int
-    public var name: String
-    public var reps: Int
-    public var parts: [String]
-}
-
-
 struct Todo: Codable, Identifiable {
     public var id: Int
-    public var date: String
     public var title: String
+    public var date: String
     public var reps: Int
 }
 
@@ -32,7 +23,7 @@ class FetchToDo: ObservableObject {
     @Published var todos = [Todo]()
      
     init() {
-        let url = URL(string: "https://github.com/Manifest21/Workout-app/blob/master/Workout%20app/trainingsData.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsData.json")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
                 if let todoData = data {
@@ -56,8 +47,9 @@ struct MenuTrain: View {
         VStack {
             List(fetch.todos) { todo in
                 VStack(alignment: .leading) {
+                    Text(todo.date)
                     Text(todo.title)
-                        .font(.body)
+                        .font(.system(size: 14))
                         .fontWeight(.light)
                         .foregroundColor(Color.blue)
                 }
