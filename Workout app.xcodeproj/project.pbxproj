@@ -111,8 +111,8 @@
 				9A63CDC7245DA699002CD7EC /* Assets.xcassets */,
 				9A63CDFB245DAAD1002CD7EC /* MenuTrain.swift */,
 				9A63CDF9245DAA9A002CD7EC /* trainingsData.json */,
-				9A63CDCC245DA699002CD7EC /* LaunchScreen.storyboard */,
 				9A63CE06245DCD7B002CD7EC /* trainingsDataItems.json */,
+				9A63CDCC245DA699002CD7EC /* LaunchScreen.storyboard */,
 				9A63CDCF245DA699002CD7EC /* Info.plist */,
 				9A63CDC9245DA699002CD7EC /* Preview Content */,
 			);

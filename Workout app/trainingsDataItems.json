@@ -3,47 +3,52 @@
     "id": 1,
     "date": "01.05.2020"
     "items": [
-    {
-        "title": "Squats",
-        "reps": 20,
-    },
-}
+        {
+            "title": "Squats",
+            "reps": 20,
+        }
+    ]
+},
     
     
 {
     "id": 1,
     "date": "1.05.2020",
     "items": [
-    {
-        "title": "Pushups",
-        "reps": 20,
-    },
+        {
+            "title": "Pushups",
+            "reps": 20,
+        }
+    ]
 },
 {
     "id": 2,
     "date": "1.05.2020",
     "items": [
-    {
-        "title": "Pullups",
-        "reps": 20,
-    },
+        {
+            "title": "Pullups",
+            "reps": 20,
+        }
+    ]
 },
 {
     "id": 3,
     "date": "2.05.2020",
     "items": [
-    {
-        "title": "Mountain Climbers",
-        "reps": 20,
-    },
+        {
+            "title": "Mountain Climbers",
+            "reps": 20,
+        }
+    ]
 },
 {
     "id": 4,
     "date": "2.05.2020",
     "items": [
-    {
-        "title": "Jumps",
-        "reps": 25,
-    },
+        {
+            "title": "Jumps",
+            "reps": 25,
+        }
+    ]
 },
 ]

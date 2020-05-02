@@ -14,8 +14,12 @@ import Combine
 
 struct Todo: Codable, Identifiable {
     public var id: Int
-    public var title: String
     public var date: String
+    public var items: [TodoItems]
+}
+
+struct TodoItems: Codable, Equatable {
+    public var title: String
     public var reps: Int
 }
 
@@ -23,7 +27,7 @@ class FetchToDo: ObservableObject {
     @Published var todos = [Todo]()
      
     init() {
-        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsData.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsDataItems.json")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
                 if let todoData = data {
@@ -51,18 +55,6 @@ struct MenuTrain: View {
                     Text(todo.date)
                         .font(.system(size: 17))
                         .foregroundColor(Color.blue)
-                    HStack(alignment: .firstTextBaseline) {
-                        Text("Exercise:")
-                            .fontWeight(.light)
-                        Text(todo.title)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color.red)
-                        Text("|  Reps:")
-                            .fontWeight(.light)
-                        Text(String(todo.reps))
-                            .foregroundColor(Color.red)
-                    }
-                    .font(.system(size: 13))
                 }
             }
         }
