@@ -23,15 +23,16 @@ struct TrainingItem: Codable, Equatable, Identifiable {
 
 struct Todo: Codable, Identifiable {
     public var id: Int
+    public var date: String
     public var title: String
-    public var items: [TrainingItem]
+    public var reps: Int
 }
 
 class FetchToDo: ObservableObject {
     @Published var todos = [Todo]()
      
     init() {
-        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsData.json")!
+        let url = URL(string: "https://github.com/Manifest21/Workout-app/blob/master/Workout%20app/trainingsData.json")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
             do {
                 if let todoData = data {
