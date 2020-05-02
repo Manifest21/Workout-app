@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    let menu = Bundle.main.decode([TrainingSession].self, from: "trainingsData.json")
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List {
+                Text("Hello")
+                }
+        }.navigationBarTitle("Menu")
     }
 }
 
