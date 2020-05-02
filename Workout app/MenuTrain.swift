@@ -53,13 +53,16 @@ struct MenuTrain: View {
     @ObservedObject var fetch = FetchTrainings()
     
     var body: some View {
-        VStack {
-            List(fetch.trainings) { trainings in
-                VStack(alignment: .leading) {
-                    Text(trainings.name)
+        NavigationView {
+            List {
+                ForEach(fetch.trainings) { types in
+                    Text(types.name)
+                    
+                    ForEach(types.items) { item in
+                        Text(item.name)
+                    }
                 }
-                
-            }
+            }.navigationBarTitle("Training History")
         }
     }
 }

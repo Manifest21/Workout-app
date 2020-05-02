@@ -1,0 +1,91 @@
+[
+{
+    "id": "01052020",
+    "name": "1.05.2020",
+    "items": [
+        {
+            "id": "1-1",
+            "name": "Squats",
+            "reps": 20,
+            "parts": ["B", "L"],
+        },
+        {
+            "id": "1-2",
+            "name": "Pushups",
+            "reps": 14,
+            "parts": ["A", "B"],
+        },
+        {
+            "id": "1-3",
+            "name": "Pull ups",
+            "reps": 5,
+            "parts": ["A", "B"],
+        },
+        {
+            "id": "1-4",
+            "name": "Leg rises",
+            "reps": 25,
+            "parts": ["B", "L"],
+        }
+    ]
+},
+{
+    "id": "02052020",
+    "name": "2.05.2020",
+    "items": [
+        {
+            "id": "2-1",
+            "name": "Squats",
+            "reps": 30,
+            "parts": ["B", "L"],
+        },
+        {
+            "id": "2-2",
+            "name": "Pushups",
+            "reps": 10,
+            "parts": ["A", "B"],
+        },
+        {
+            "id": "2-3",
+            "name": "Pull ups",
+            "reps": 50,
+            "parts": ["A", "B"],
+        },
+        {
+            "id": "2-4",
+            "name": "Leg rises",
+            "reps": 55,
+            "parts": ["B", "L"],
+        }
+    ]
+},
+{
+    "id": "03052020",
+    "name": "3.05.2020",
+    "items": [
+        {
+            "id": "3-1",
+            "name": "Squats",
+            "reps": 22,
+            "parts": ["B", "L"],
+        },
+        {
+            "id": "3-2",
+            "name": "Pushups",
+            "reps": 12,
+            "parts": ["A", "B"],
+        },
+        {
+            "id": "3-3",
+            "name": "Pull ups",
+            "reps": 7,
+            "parts": ["A", "B"],
+        },
+        {
+            "id": "3-4",
+            "name": "Leg rises",
+            "reps": 37,
+            "parts": ["B", "L"],
+        }
+    ]
+},
