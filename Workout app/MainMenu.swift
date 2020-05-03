@@ -24,7 +24,7 @@ struct MainMenu: View {
                     .background(LinearGradient(gradient: Gradient(colors: [Color("DarkGreen"), Color("LightGreen")]), startPoint: .topLeading, endPoint: .bottomTrailing))
                     .cornerRadius(40)
                     Spacer()
-                    NavigationLink(destination: AddTraining()) {
+                    NavigationLink(destination: NewTraining()) {
                         Image(systemName: "text.badge.plus")
                             .font(.system(size: 60))
                             .frame(width: 125, height: 125)

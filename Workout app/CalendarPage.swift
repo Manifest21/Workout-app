@@ -10,10 +10,13 @@ import SwiftUI
 
 struct CalendarPage: View {
     var body: some View {
-        Image(systemName: "calendar")
-            .font(.system(size: 100))
-            .foregroundColor(.blue)
-        
+        VStack {
+            Image(systemName: "calendar")
+                .font(.system(size: 100))
+                .foregroundColor(.blue)
+                .padding(.bottom, 20)
+            Text("CALENDAR PAGE")
+        }
     }
 }
 

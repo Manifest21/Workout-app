@@ -10,10 +10,14 @@ import SwiftUI
 
 struct Statistics: View {
     var body: some View {
-        Image(systemName: "person.crop.square")
-            .font(.system(size: 100))
-            .foregroundColor(Color("DarkRed"))
-
+        VStack {
+            
+            Image(systemName: "person.crop.square")
+                .font(.system(size: 100))
+                .foregroundColor(Color("DarkRed"))
+                .padding(.bottom, 20)
+            Text("STATISTICS PAGE")
+        }
     }
 }
 

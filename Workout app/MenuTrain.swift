@@ -44,30 +44,32 @@ class FetchToDo: ObservableObject {
     }
 }
 
+
 struct MenuTrain: View {
     @ObservedObject var fetch = FetchToDo()
     
     var body: some View {
-        VStack {
-            List(fetch.todos) { todo in
-                VStack(alignment: .leading) {
-                    Text(todo.date)
-                        .font(.system(size: 17))
-                        .foregroundColor(Color.blue)
-                    HStack(alignment: .firstTextBaseline) {
-                        Text("Exercise:")
-                            .fontWeight(.light)
-                        Text(todo.title)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color.red)
-                        Text("|  Reps:")
-                            .fontWeight(.light)
-                        Text(String(todo.reps))
-                            .foregroundColor(Color.red)
+        NavigationView {
+                List(fetch.todos) { todo in
+                    VStack(alignment: .leading) {
+                        Text(todo.date)
+                            .font(.system(size: 17))
+                            .foregroundColor(Color.blue)
+                        HStack(alignment: .firstTextBaseline) {
+                            Text("Exercise:")
+                                .fontWeight(.light)
+                            Text(todo.title)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color.red)
+                            Text("|  Reps:")
+                                .fontWeight(.light)
+                            Text(String(todo.reps))
+                                .foregroundColor(Color.red)
+                        }
+                        .font(.system(size: 13))
                     }
-                    .font(.system(size: 13))
                 }
-            }
+                .navigationBarTitle("Training history", displayMode: .inline)
         }
     }
 }
