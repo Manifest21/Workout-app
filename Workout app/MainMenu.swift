@@ -46,7 +46,7 @@ struct MainMenu: View {
                     .background(LinearGradient(gradient: Gradient(colors: [Color("DarkBlue"), Color("LightBlue")]), startPoint: .bottomLeading, endPoint: .topTrailing))
                     .cornerRadius(40)
                     Spacer()
-                    NavigationLink(destination: MenuTrain()) {
+                    NavigationLink(destination: Statistics()) {
                         Image(systemName: "person.crop.square")
                             .font(.system(size: 60))
                             .frame(width: 125, height: 125)
