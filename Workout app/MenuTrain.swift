@@ -22,27 +22,7 @@ struct Todo: Codable, Identifiable {
 }
 
 
-class FetchToDo: ObservableObject {
-    @Published var todos = [Todo]()
-     
-    init() {
-        let url = URL(string: "https://raw.githubusercontent.com/Manifest21/Workout-app/master/Workout%20app/trainingsData.json")!
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
-            do {
-                if let todoData = data {
-                    let decodedData = try JSONDecoder().decode([Todo].self, from: todoData)
-                    DispatchQueue.main.async {
-                        self.todos = decodedData
-                    }
-                } else {
-                    print("No data")
-                }
-            } catch {
-                print("Error")
-            }
-        }.resume()
-    }
-}
+
 
 
 struct MenuTrain: View {
@@ -71,6 +51,7 @@ struct MenuTrain: View {
                 }
                 .navigationBarTitle("Training history", displayMode: .inline)
         }
+        .padding(.top, -1)
     }
 }
 

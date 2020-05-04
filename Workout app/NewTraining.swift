@@ -7,37 +7,32 @@
 //
 
 import SwiftUI
+import Combine
+
 
 struct NewTraining: View {
-    
-    @State private var title: String = ""
-    @State private var date: String = ""
-    @State private var reps: String = ""
+    @ObservedObject var order = FetchToDo()
+    @State private var testos: Double = 0
     
     var body: some View {
-        NavigationView {
-            VStack (spacing: 30){
-                TextField(" Exercise name", text: $title)
-                    .frame(width: 220, height: 40)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color("LightGrey"), Color("DarkGrey")]), startPoint: .top, endPoint: .bottom).opacity(0.3))
-                    .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray.opacity(0.3), lineWidth: 1))
-                    .padding(.top, 50)
-                TextField(" Date: dd-mm-yyyy", text: $date)
-                    .frame(width: 220, height: 40)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color("LightGrey"), Color("DarkGrey")]), startPoint: .top, endPoint: .bottom).opacity(0.3))
-                    .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray.opacity(0.3), lineWidth: 1))
-                TextField(" Reps count", text: $reps)
-                    .frame(width: 220, height: 40)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color("LightGrey"), Color("DarkGrey")]), startPoint: .top, endPoint: .bottom).opacity(0.3))
-                    .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray.opacity(0.3), lineWidth: 1))
-                Spacer()
+        NavigationView{
+            Form {
+                    Picker(selection: $order.title, label: Text("Select exercise")) {
+                        ForEach(0 ..< FetchToDo.titles.count) {
+                            Text(FetchToDo.titles[$0]).tag($0)
+                        }
+                    }
+            .pickerStyle(SegmentedPickerStyle())
+                
+                Slider(value: $testos, in: 5...100) {
+                    Text("Number of reps: \(testos)")
+                }
             }
-        .navigationBarTitle("Add workout")
-
         }
-        .padding(.horizontal)
+    .navigationBarTitle(Text("Add workout"))
     }
 }
+
 
 struct NewTraining_Previews: PreviewProvider {
     static var previews: some View {

@@ -22,6 +22,7 @@
 		9AACEAFA245F0E0A0075DC04 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AACEAF9245F0E0A0075DC04 /* Statistics.swift */; };
 		9AACEAFE245F58EC0075DC04 /* TrainingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AACEAFD245F58EC0075DC04 /* TrainingHistory.swift */; };
 		9AACEB02245F67740075DC04 /* NewTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AACEB01245F67740075DC04 /* NewTraining.swift */; };
+		9AACEB04245F95C10075DC04 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AACEB03245F95C10075DC04 /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9AACEAF9245F0E0A0075DC04 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		9AACEAFD245F58EC0075DC04 /* TrainingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistory.swift; sourceTree = "<group>"; };
 		9AACEB01245F67740075DC04 /* NewTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTraining.swift; sourceTree = "<group>"; };
+		9AACEB03245F95C10075DC04 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				9AACEAF5245F0D490075DC04 /* CalendarPage.swift */,
 				9A63CDFB245DAAD1002CD7EC /* MenuTrain.swift */,
 				9AACEAFD245F58EC0075DC04 /* TrainingHistory.swift */,
+				9AACEB03245F95C10075DC04 /* Database.swift */,
 				9AACEB01245F67740075DC04 /* NewTraining.swift */,
 				9AACEAF9245F0E0A0075DC04 /* Statistics.swift */,
 				9A63CDC7245DA699002CD7EC /* Assets.xcassets */,
@@ -297,6 +300,7 @@
 				9A63CDC2245DA698002CD7EC /* AppDelegate.swift in Sources */,
 				9A63CDC4245DA698002CD7EC /* SceneDelegate.swift in Sources */,
 				9A63CDC6245DA698002CD7EC /* ContentView.swift in Sources */,
+				9AACEB04245F95C10075DC04 /* Database.swift in Sources */,
 				9AACEAFA245F0E0A0075DC04 /* Statistics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
